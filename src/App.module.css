@@ -1,0 +1,23 @@
+body{
+  font-size: 20px;
+}
+.fieldbox{
+  width: 500px;
+  margin-left: 400px;
+  margin-bottom: 50px;
+}
+.addIdbox{
+  background-color: gray;
+  margin-left: 10px;
+  border-style: none;
+  height: 25px;
+  border-radius: 10px;
+}
+.showButton{
+  margin-left: 10px;
+  background-color: lightskyblue;
+  border-style: none;
+  padding: 5px 5px 5px 5px;
+  border-radius: 10px;
+  width: 120px;
+}
