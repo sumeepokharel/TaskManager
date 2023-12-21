@@ -1,0 +1,32 @@
+.appContainer {
+  font-family: "Times New Roman", Times, serif;
+  background-color: rgb(222, 197, 185);
+  width: fit-content;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.tasklist {
+  list-style-type: none;
+  padding: 10px;
+  color: aqua;
+}
+
+.taskItem {
+  margin-bottom: 10px;
+}
+
+.taskButtons {
+  margin: 10px;
+  color: blue;
+}
+
+.taskInput {
+  padding: 10px;
+  margin-right: 4px;
+  background-color: rgb(187, 72, 164);
+  color: yellow;
+}
