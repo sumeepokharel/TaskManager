@@ -1,33 +1,102 @@
-.appContainer {
-  font-family: "Times New Roman", Times, serif;
-  background-color: rgb(219, 186, 195);
+.container {
+  background-color: rgb(238, 215, 4);
   width: max-content;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 2rem;
+  display: flex;
+  margin: auto;
+  padding: 40px;
+  flex-direction: column;
   text-align: center;
-  border-radius: 20px;
+  align-items: center;
+  color: rgb(48, 11, 236);
 }
 
-.list {
+.inputBox {
+  height: 30px;
+  border-color: rgb(112, 4, 213);
+  border-radius: 10px;
+  box-shadow: 2px 2px;
+  margin-right: 10px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.addButton {
+  font-size: 20px;
+  height: 33px;
+  border-style: none;
+  background-color: #0794d0;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+}
+.addButton:hover {
+  background-color: #c66f0b;
+}
+.tasklist {
   list-style-type: none;
-  padding: 10px;
-  color: rgb(77, 126, 126);
+  padding: 0;
 }
-
 .taskItem {
+  border: 1px solid #0b27de;
+  margin: 10px 0;
+  padding: 15px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.taskInfo {
   margin-bottom: 10px;
-  color: rgb(10, 10, 220);
+}
+.completedStatus {
+  color: #4caf50;
+}
+.incompleteStatus {
+  color: #f44336;
 }
 
-.taskButtons {
-  margin: 10px;
-  color: rgb(80, 5, 36);
+.editButton {
+  font-size: 20px;
+  height: 33px;
+  border-style: none;
+  background-color: #88bc64;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.editButton:hover {
+  background-color: #ea2e50;
+}
+.deleteButton {
+  font-size: 20px;
+  height: 33px;
+  background-color: #d76159;
+  color: white;
+  border-style: none;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.deleteButton:hover {
+  background-color: #1caa09;
 }
 
-.taskInput {
-  padding: 10px;
-  margin-right: 4px;
-  background-color: rgb(187, 72, 164);
-  color: yellow;
+.addButton {
+  background-color: #9d89ed;
+  color: white;
+}
+.editButton {
+  background-color: #2196f3;
+  color: white;
+}
+
+.taskActions {
+  display: flex;
+  justify-content: center;
 }
