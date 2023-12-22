@@ -1,6 +1,6 @@
 .appContainer {
   font-family: "Times New Roman", Times, serif;
-  background-color: rgb(175, 169, 228);
+  background-color: rgb(219, 186, 195);
   width: max-content;
   max-width: 1300px;
   margin: 0 auto;
@@ -17,11 +17,12 @@
 
 .taskItem {
   margin-bottom: 10px;
+  color: rgb(10, 10, 220);
 }
 
 .taskButtons {
   margin: 10px;
-  color: blue;
+  color: rgb(80, 5, 36);
 }
 
 .taskInput {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import styles from "../App.module.css";
 
 interface Task {
   userId: number;
@@ -7,11 +8,12 @@ interface Task {
   title: string;
   completed: boolean;
 }
+
 interface TaskListProps {
-  taskss: Task[];
+  task: Task[];
 }
 
-const TaskList: React.FC<TaskListProps> = ({ taskss }) => {
+const TaskList: React.FC<TaskListProps> = ({ task }) => {
   const [tasks, setTasks] = useState<Task[]>([]);
 
   useEffect(() => {
@@ -31,8 +33,9 @@ const TaskList: React.FC<TaskListProps> = ({ taskss }) => {
       <h2>Task List</h2>
       <ul>
         {tasks.map((task) => (
-          <li key={task.id}>
+          <li key={task.id} className={styles.taskItem}>
             {task.title} {task.id} {task.completed ? "Completed" : "Incomplete"}
+            <div className={styles.taskButtons}></div>
           </li>
         ))}
       </ul>

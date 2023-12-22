@@ -4,6 +4,12 @@ import TaskForm from "./component/TaskForm";
 import CRUDOperations from "./component/CRUDOperations";
 import styles from "./App.module.css";
 
+interface Task {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+}
 const App: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskTitle, setNewTaskTitle] = useState("");
@@ -50,7 +56,7 @@ const App: React.FC = () => {
     <div>
       <div className={styles.appContainer}>
         <h1>Task Manager</h1>
-        <TaskList taskss={tasks} />
+        <TaskList task={tasks} />
         <TaskForm addTask={addTask} />
         <CRUDOperations
           editTask={editTask}
