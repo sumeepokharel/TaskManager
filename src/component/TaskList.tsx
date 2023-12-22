@@ -7,8 +7,11 @@ interface Task {
   title: string;
   completed: boolean;
 }
+interface TaskListProps {
+  taskss: Task[];
+}
 
-const TaskList: React.FC = () => {
+const TaskList: React.FC<TaskListProps> = ({ taskss }) => {
   const [tasks, setTasks] = useState<Task[]>([]);
 
   useEffect(() => {
@@ -28,7 +31,9 @@ const TaskList: React.FC = () => {
       <h2>Task List</h2>
       <ul>
         {tasks.map((task) => (
-          <li key={task.id}>{task.title}</li>
+          <li key={task.id}>
+            {task.title} {task.id} {task.completed ? "Completed" : "Incomplete"}
+          </li>
         ))}
       </ul>
     </div>

@@ -1,7 +1,7 @@
 .appContainer {
   font-family: "Times New Roman", Times, serif;
-  background-color: rgb(222, 197, 185);
-  width: fit-content;
+  background-color: rgb(175, 169, 228);
+  width: max-content;
   max-width: 1300px;
   margin: 0 auto;
   padding: 2rem;
@@ -9,10 +9,10 @@
   border-radius: 20px;
 }
 
-.tasklist {
+.list {
   list-style-type: none;
   padding: 10px;
-  color: aqua;
+  color: rgb(77, 126, 126);
 }
 
 .taskItem {
