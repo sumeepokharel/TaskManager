@@ -64,7 +64,7 @@ const TaskList: React.FC = ({}) => {
 
   return (
     <>
-      {/* <fieldset className={styles.container}>
+      <fieldset className={styles.container}>
         <form onSubmit={handleAddTask} className="add - task">
           <input
             className={styles.inputBox}
@@ -73,54 +73,58 @@ const TaskList: React.FC = ({}) => {
             value={newTask}
             onChange={(e) => setNewTask(e.target.value)}
           />
-          <button type="submit" className={styles.editButton}>
+          <button type="submit" className={styles.addButton}>
             Add New Task
           </button>
-        </form> */}
+        </form>
 
-      <div>
-        <h2>Todo List</h2>
-        <ul className="task-list">
-          {tasks
-            .map((task) => (
-              <li key={task.id} className="task-item">
-                {editingTask === task.id ? (
-                  <div className="edit-form">
-                    <input
-                      type="text"
-                      value={editedTask}
-                      onChange={(e) => setEditedTask(e.target.value)}
-                    />
-                    <button onClick={() => handleSaveEdit(task.id)}>
-                      Save
-                    </button>
-                  </div>
-                ) : (
-                  <>
-                    <li>{task.id}</li>
-                    <li>{task.title}</li>
-                    <li>{task.completed.toString()}</li>
-                    <div className="task-actions">
+        <div>
+          <h2>Todo List</h2>
+          <ul className={styles.tasklist}>
+            {tasks
+              .map((task) => (
+                <li key={task.id} className="task-item">
+                  {editingTask === task.id ? (
+                    <div className="edit-form">
+                      <input
+                        type="text"
+                        value={editedTask}
+                        onChange={(e) => setEditedTask(e.target.value)}
+                      />
                       <button
-                        className={styles.editButton}
-                        onClick={() => handleEditTask(task.id)}
+                        onClick={() => handleSaveEdit(task.id)}
+                        className={styles.addButton}
                       >
-                        Edit
-                      </button>
-                      <button
-                        className={styles.editButton}
-                        onClick={() => handleDeleteTask(task.id)}
-                      >
-                        Delete
+                        Save
                       </button>
                     </div>
-                  </>
-                )}
-              </li>
-            ))
-            .reverse()}
-        </ul>
-      </div>
+                  ) : (
+                    <>
+                      <li>Id : {task.id}</li>
+                      <li>title : {task.title}</li>
+                      <li>Complete Status: {task.completed.toString()}</li>
+                      <div className="task-actions">
+                        <button
+                          className={styles.editButton}
+                          onClick={() => handleEditTask(task.id)}
+                        >
+                          Edit
+                        </button>
+                        <button
+                          className={styles.editButton}
+                          onClick={() => handleDeleteTask(task.id)}
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </li>
+              ))
+              .reverse()}
+          </ul>
+        </div>
+      </fieldset>
     </>
   );
 };

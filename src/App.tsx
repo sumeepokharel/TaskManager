@@ -1,14 +1,9 @@
-import { useState } from "react";
-import Form from "./component/form";
-import TaskList from "./component/GetAllList";
-import LookId from "./component/LookUpById";
+import TaskList from "./component/TaskList";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <Form />
+      <TaskList />
     </>
   );
 }

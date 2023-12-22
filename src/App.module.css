@@ -1,23 +1,44 @@
-body{
+.tasklist {
+  list-style: none;
+}
+.container {
+  background-color: rgb(186, 160, 184);
+  width: max-content;
+  margin: auto;
+  padding: 40px;
+  text-align: center;
+  color: rgb(5, 25, 247);
+}
+
+.inputBox {
+  height: 30px;
+  border-color: blueviolet;
+  border-radius: 10px;
+  box-shadow: 2px 2px;
+  margin-right: 10px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.addButton {
   font-size: 20px;
-}
-.fieldbox{
-  width: 500px;
-  margin-left: 400px;
-  margin-bottom: 50px;
-}
-.addIdbox{
-  background-color: gray;
-  margin-left: 10px;
+  height: 33px;
   border-style: none;
-  height: 25px;
+  background-color: #26a7de;
   border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
 }
-.showButton{
-  margin-left: 10px;
-  background-color: lightskyblue;
+
+.editButton {
+  font-size: 20px;
+  height: 33px;
   border-style: none;
-  padding: 5px 5px 5px 5px;
+  background-color: #9ad8e3;
   border-radius: 10px;
-  width: 120px;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
